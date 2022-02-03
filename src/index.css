@@ -1,13 +1,87 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.todo-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 150px 0 0 0;
+  align-items: center;
+}
+
+.todoinput {
+  display: flex;
+  align-items: center;
+}
+
+.todoinput .input-field {
+  flex: 1 1 300px;
+}
+
+.todoinput .button-wrap {
+  margin: 0 0 0 15px;
+}
+
+.todolist {
+  background-color: #f7f5f5;
+  padding: 20px !important;
+  border-radius: 13px;
+  min-height: 50vh;
+}
+
+.todolist .todo {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ededed;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  position: relative;
+  /* opacity: 0; */
+}
+
+.todolist .todo .todo-desc {
+  max-width: 800px;
+}
+
+.todolist .todo .todo-desc p {
+  color: #4e4e4e;
+}
+
+.todolist .todo .todo-delete {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.todolist .todo .todo-delete i {
+  font-size: 4rem;
+  color: red;
+}
+
+.todoanim-enter {
+  opacity: 0;
+  left: -50px;
+}
+.todoanim-enter-active {
+  opacity: 1;
+  left: 0;
+  transition: all 200ms ease-in;
+}
+.todoanim-exit {
+  opacity: 1;
+  left: 0;  
+}
+.todoanim-exit-active {
+  opacity: 0;
+  left: -50px;
+  transition: all 200ms ease-in;
 }
